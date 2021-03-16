@@ -1,0 +1,43 @@
+
+ul {//ul list decoration
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+   
+  }
+  img{// icon image
+    max-width: 70px;
+    float:left
+   
+  }
+  li {// navbar list to the right
+    float: right    ;
+    
+  }
+
+  
+  li a {// link decoration
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover {//link reaction on hover
+    color: yellow;
+  }
+ 
+  nav {//sticky navbar
+    position: relative;
+    position: -webkit-relative;
+    top: 0; /* required */
+    background-color: black;
+    z-index: 1;
+    
+  }
+  div{// divider line
+    border-bottom: 1;
+   
+  }

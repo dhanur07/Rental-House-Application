@@ -1,0 +1,52 @@
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+    <!-- navigates to house=add page for adding a new house -->
+    <div   class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <button class="btn btn-link"> <a class="nav-link" (click)="naviagte()">Want to sell a house?<span class="sr-only">(current)</span></a></button>
+        </li>
+      </ul>
+    </div>
+
+    
+    <div class="collapse navbar-collapse" id="navbarText">
+      <!--Shows posted list of houses of the user logged in  -->
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <button type="button" class="btn btn-link"> <a class="nav-link" (click)= "getPostedHouses()">My Posted House List <span class="sr-only">(current)</span></a></button>
+        </li>
+      </ul>
+      <!-- Shows houses the user has marked as favourite during his search -->
+      <ul class="navbar-nav mr-auto">
+         <li class="nav-item active">
+           <button class="btn btn-link"> <a class="nav-link" (click)="getFavorites()">My Favorite Houses<span class="sr-only">(current)</span></a></button>
+          </li>
+        </ul>
+      </div>
+
+      <div class="d-flex justify-content-end">
+        <button class="btn btn-dark" (click)="logout()">Logout</button>
+      </div>
+    </nav>
+    
+    <!-- diplay houses as per the user logged in -->
+    <div class="container-fluid">
+      <div class=" grid-item-1 p-3 mb-2">
+        <ul class="houses">
+          <li *ngFor="let h of houses; let i=index;">
+            <div *ngIf="currentUser === h.username"  class="card">
+              <button *ngIf=(!h.favorite) class="favoriteclass" title="add to favorites" (click)="favorite(h)">Add to Favorite</button>
+              <button *ngIf=(h.favorite) class="favoriteclassremove" title="remove from favorites" (click)="undofavorite(h)">Remove from Favorite</button>
+              <a routerLink="/house-details/{{h._id}}">
+                <span class="no">{{h.description}} {{h.address}}</span>
+                <span class="no">{{h.noOfBedroom}} Bedrooms</span>
+              </a>
+              <img src="assets/{{h.imgsrc}}" class="img-responsive"  width="304" height="106"/>
+              <button class="deletebtn" title="delete house" (click)="delete(h._id)">x</button>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>

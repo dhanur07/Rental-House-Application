@@ -1,0 +1,103 @@
+<hr size="1px">
+<div class="container">
+<!--Details to fill for new posting-->
+    <h2>House Add</h2>
+    <div class="box" >
+    <div class="form-group">
+        <label for="add">Address*</label><br>
+        <input type="text" class="form-control" id="add" [(ngModel)]="houseData.address" placeholder="Enter Street Address" required>
+    </div>
+    <div class="form-group">
+      <label for="city">City*</label><br>
+      <input type="text" class="form-control" id="city" [(ngModel)]="houseData.city" placeholder="Enter City" required>
+    </div>
+    <div class="form-group">
+      <label for="state">State*</label><br>
+      <input type="text" class="form-control" id="state" [(ngModel)]="houseData.state" placeholder="Enter State" required>
+    </div>
+  
+  <div class="form-group">
+    <label for="zip">Zip Code*</label><br>
+    <input type="text" class="form-control" id="zip" [(ngModel)]="houseData.zip" placeholder="Enter Zip Code" required>
+</div>
+    <div class="form-group">
+    <label for="desc">House Description*</label><br>
+      <textarea rows ="7" type="text" id="desc" [(ngModel)]="houseData.description" placeholder="House Description" required></textarea>
+    
+    </div>
+    <div class="form-group">
+      <label for="price">Price</label><br>
+      <input type="text" class="form-control" id="price" [(ngModel)]="houseData.price" placeholder="Enter House Price" required>
+  </div>
+    <div class="form-group">
+      <label for="htype">House Type</label><br>
+      <select type="text" class="form-control" id="htype" [(ngModel)]="houseData.houseType" placeholder="Enter House Type" required>
+        <option>Select House Type</option>
+        <option>Colonial</option>
+      <option>Ranch</option>
+      <option>Slabbed</option>
+      </select>
+    </div>
+
+  <div class="form-group">
+    <label for="bedrooms">Number of Bedrooms</label><br>
+    <select type="text" class="form-control" id="bedrooms" [(ngModel)]="houseData.noOfBedroom" placeholder="Enter number of bedrooms" required>
+    <option>Select Bedrooms</option>
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+    <option>6</option>
+    <option>7</option>
+    <option>8</option>
+    <option>9</option>
+    <option>10</option>
+    </select>
+  </div>
+
+<div class="form-group">
+  <label for="bathrooms">Number of Bathrooms</label><br>
+  <select type="text" class="form-control" id="bathrooms" [(ngModel)]="houseData.noOfBathrooms" placeholder="Enter number of bathrooms" required>
+  <option>Select Bath</option>
+  <option>1</option>
+  <option>2</option>
+  <option>3</option>
+  <option>4</option>
+  <option>5</option>
+  <option>6</option>
+  <option>7</option>
+  <option>8</option>
+  <option>9</option>
+  <option>10</option>
+  </select>
+</div>
+
+<div class="form-group">
+  <label for="sqft">Area of House(in sqft) *</label><br>
+  <input type="text" class="form-control" id="sqft" [(ngModel)]="houseData.sqft" placeholder="Enter the Area in square feet" required>
+</div>
+
+<div class="form-group">
+  <label for="purpose">Purpose</label><br>
+  <input type="text" class="form-control" id="purpose" [(ngModel)]="houseData.purpose" placeholder="purpose" required>
+</div>
+<label class="image-upload-container btn btn-bwm">
+
+         <!--Upload image to post-->
+</label>
+<hr>
+<h4>Upload Images</h4>
+<div id="uploadImage">
+<input type="file" name="photo" ng2FileSelect [uploader]="uploader" id="file" />
+<button type="button" class="btn btn-success btn-s" id="upload"
+        (click)="uploader.uploadAll()"
+        [disabled]="!uploader.getNotUploadedItems().length" >
+  Upload
+</button>
+</div>
+<hr>
+    <button (click)="addHouse()">Save</button>
+  
+  </div>
+</div>

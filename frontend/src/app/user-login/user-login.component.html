@@ -1,0 +1,47 @@
+<body>
+    <hr size="1px">
+    <div class="container">
+        <div class="d-flex justify-content-center">
+            <div class="card">
+            <div class="card-header">
+                <h4 class="d-flex justify-content-center">Login Here</h4>
+                <p class="lead">Not a member? Please <a routerLink="/new-user">register</a> instead.</p>
+            </div>
+            <!-- Card body for login form -->
+            <div class="card-body">
+                <form  (submit)="onSubmit()" name = "myForm" [formGroup]="loginForm" class="mx-auto" novalidate>
+                    
+                    <div class="form-group">
+                        <div  class="input-group form-group">
+                        <div  class="input-group form-group">
+                            <label for="username" style="margin: 10px;" >Username</label>
+                            <input type="email" class= "form-control" name= "email" placeholder="Enter Username" formControlName = "username" class="form-control"  [(ngModel)]="credentials.username" formControlName="username"  required style="margin: 10px;">
+                        </div>
+                        <div *ngIf = "loginForm.controls['username'].invalid && (loginForm.controls['username'].dirty || loginForm.controls['username'].touched)" class="alert alert-danger">
+                            <div *ngIf="loginForm.controls['username'].errors.required">Email is required</div>
+                        </div>
+                        </div>
+                    </div>
+                       
+                    <div class="form-group">
+                        <div class="input-group form-group">
+                        <div class="input-group form-group" >
+                            <label for="password" style="margin: 10px;">Password</label>
+                            <input type="password"  formControlName= "password" class= "form-control" placeholder="Enter Password" style="margin: 10px;" [(ngModel)]="credentials.password" required>
+                            <div *ngIf="loginForm.controls['password'].invalid && (loginForm.controls['password'].dirty || loginForm.controls['password'].touched)"class="alert alert-danger">
+                                <div *ngIf="loginForm.controls['password'].errors.required">Password is required</div>
+                            </div>
+                        </div>
+                        <div class="input-group form-group" >
+                            <button [disabled]="loginForm.pristine || loginForm.invalid" type="button" class="btn btn-dark" style="margin: 10px;" (click) = 'onSubmit()'> Login </button>
+                            <button type="button" style="margin: 10px;" class="btn btn-link" (click)="newUser($event)">New User? </button>
+                        </div>
+                    </div>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+

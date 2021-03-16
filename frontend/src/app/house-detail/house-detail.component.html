@@ -1,0 +1,73 @@
+<div *ngIf="house" class="houses">
+  <h2>{{house.description}} Details</h2>
+  <div class="box">
+        <!--form for address-->
+
+    <div class="form-group">
+        <label for="add">Address</label><br>
+        <input type="text" class="form-control" id="add" [(ngModel)]="house.address" placeholder="Enter Street Address" disabled>
+    </div>
+    <div class="form-group">
+          <!--form for city-->
+
+      <label for="city">City</label><br>
+      <input type="text" class="form-control" id="city" [(ngModel)]="house.city" placeholder="Enter Zip Code" disabled>
+  </div>
+      <!--form for state-->
+    <div class="form-group">
+      <label for="state">State</label><br>
+      <input type="text" class="form-control" id="state" [(ngModel)]="house.state" placeholder="Enter State" disabled>
+  </div>
+
+        <!--form for zipcode-->
+  <div class="form-group">
+    <label for="zip">Zip Code</label><br>
+    <input type="text" class="form-control" id="zip" [(ngModel)]="house.zip" placeholder="Enter Zip Code" disabled>
+</div>
+      <!--form for house description-->
+    <div class="form-group">
+    <label for="desc">House Description </label><br>
+      <textarea rows ="7" type="text" id="desc" [(ngModel)]="house.description" placeholder="House Description" disabled></textarea>
+    
+    </div>
+          <!--form for House price-->
+    <div class="form-group">
+      <label for="price">House Price</label><br>
+      <input type="text" class="form-control" id="price" [(ngModel)]="house.price" placeholder="Enter Price" disabled>
+  </div>
+  
+        <!--form for house type-->
+
+    <div class="form-group">
+      <label for="htype">House Type</label><br>
+      <input type="text" class="form-control" id="htype" [(ngModel)]="house.houseType" placeholder="Enter House Type" disabled>
+  </div>
+  
+        <!--form for Bedrooms-->
+  <div class="form-group">
+    <label for="bedrooms">Number of Bedrooms</label><br>
+    <input type="text" class="form-control" id="bedrooms" [(ngModel)]="house.noOfBedroom" placeholder="Enter number of bedrooms" disabled>
+  </div>
+        <!--form for bathrooms-->
+  <div class="form-group">
+  <label for="bathrooms">Number of Bathrooms</label><br>
+  <input type="text" class="form-control" id="bathrooms" [(ngModel)]="house.noOfBathrooms" placeholder="Enter number of bathrooms" disabled>
+  </div>
+        <!--form for area-->
+
+  <div class="form-group">
+  <label for="sqft">Area of House</label><br>
+  <input type="text" class="form-control" id="sqft" [(ngModel)]="house.sqft" placeholder="Enter the Area in square feet" disabled>
+  </div>
+        <!--form for purpose-->
+
+  <div class="form-group">
+  <label for="purpose">Purpose</label><br>
+  <input type="text" class="form-control" id="purpose" [(ngModel)]="house.noOfBathrooms" placeholder="purpose" disabled>
+  </div>
+  <button routerLink="/house-edit/{{house._id}}">
+    Edit
+  </button>
+</div>
+</div>
+

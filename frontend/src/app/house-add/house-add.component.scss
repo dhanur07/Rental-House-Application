@@ -1,0 +1,40 @@
+input[type=text], select {
+    width: 80%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+.box{
+    border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+textarea{
+    width: 80%;
+}
+#upload{
+  margin-top: 10px;
+  margin-bottom: 20px;
+  background-color: #17a2b8;
+}
+
+#file{
+  margin-top: 20px;
+  //margin-bottom: 50px;
+}
+
+#uploadImage{
+  background-color:paleturquoise;
+  width: 800px;
+  height: 70px;
+  text-align: center;
+  display: inline-block;
+  margin-top: 20px;
+  border-radius: 50px 50px 50px 50px;
+  margin-left: 20px;
+}
+

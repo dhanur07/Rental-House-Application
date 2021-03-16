@@ -1,0 +1,58 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<hr size="1px">
+
+<div>
+  
+    <input type="text" class="form-control" (keydown.enter)="$event.preventDefault()" placeholder="Enter Address" autocorrect="off" autocapitalize="off" spellcheck="off" type="text"  #search>
+     <div class="input-group-append mt-auto">
+     <button   class="btn btn-dark" id="srch" name='Search' value='Search' (click)="getPostedHouses(search.value)" >Search</button>    <!--search button linked to geolocation-->  
+    &nbsp;<br>
+    </div>
+    </div>
+    <br>
+    <div class="grid-container">
+  <div class="grid-item">
+      <agm-map [latitude]="latitude" [longitude]="longitude" [zoom]="zoom"> <!--implementing maps-->
+        <agm-marker [latitude]="latitude" [longitude]="longitude" [markerDraggable]="true"
+          (dragEnd)="markerDragEnd($event)"></agm-marker>
+      </agm-map>
+      </div>
+ 
+    <!-- </div -->
+  <!-- </div> -->
+  
+ 
+  <div class="grid-item-2 ">
+    <!-- /<div class="button">
+      <button (click)="add()">
+        Add
+      </button>
+    </div> -->
+    
+    <ul class="houses">
+      <li *ngFor="let h of houses; let i=index;"> <!--viewing houses with respect to cities-->
+        
+          <div *ngIf="search.value.includes(h.city) " class="card">
+           
+          <div *ngIf=(currentUser)> 
+              <button class="favoriteclass" title="add to favorites" (click)="favorite(h)">Add to Favorite</button>
+                </div> 
+            <a routerLink="/house-details/{{h._id}}">
+              <span class="no"><h2>{{h.price}}/- $$</h2><br> {{h.address}}<br>{{h.description}} </span>
+              <span class="no">{{h.noOfBedroom}} Bed || {{h.noOfBathrooms}} Bath || {{h.sqft}}  </span>
+            </a>
+            <img src="assets/{{h.imgsrc}}" class="img-responsive"  width="304" height="106"/> 
+ 
+           </div>
+<!--         
+          <button class="deletebtn" title="delete house" (click)="delete(h._id)">x</button>  -->
+        </li>
+      </ul>
+      
+
+ </div>
+ </div>
+ 
+ 

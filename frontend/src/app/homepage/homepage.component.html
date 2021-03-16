@@ -1,0 +1,134 @@
+<div class="container">
+<ngb-carousel *ngIf="images">
+  
+    <ng-template ngbSlide>    <!--slider-->
+      <div class="picsum-img-wrapper">
+        <img src="assets/home02.jpg" alt="Random first slide" >   
+
+      </div>
+      <div class="carousel-caption">
+        <h3>Buy or Rent Houses</h3>
+        <p>You can Buy or rent Houses </p>    <!--text on slider-->
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img src="assets/home01.jpg" alt="Random second slide" class="resposive">
+      </div>
+      <div class="carousel-caption">
+        <h3>Sell Houses</h3>                <!--text on slider-->
+        <p>You can also choose to sell or rent your property</p>
+      </div>
+    </ng-template>
+
+    <ng-template ngbSlide>
+        <div class="picsum-img-wrapper">
+          <img src="assets/home03.jpg" alt="Random second slide">
+        </div>
+        <div class="carousel-caption">
+          <h3>Manage your Favorities</h3>
+          <p>Create a wishlist of Houses of your choice</p>                <!--text on slider-->
+        </div>
+      </ng-template>
+    
+      <ng-template ngbSlide>
+        <div class="picsum-img-wrapper">
+          <img src="assets/home04.jpg" alt="Random second slide">
+        </div>
+        <div class="carousel-caption">
+          <h3>Use maps to Navigate</h3>
+          <p>Locate your rentals on the maps</p>                <!--text on slider-->
+          
+        </div>
+       
+      </ng-template>
+      </ngb-carousel>
+      
+    </div>
+      <div class="lower text-center">
+        <button  routerLink="/houses" type="button" class="btn btn-dark btn-lg btn-outline-light">View Rentals</button> &nbsp;
+        <button routerLink="/house-add" type="button" class="btn btn-light btn-lg btn-outline-dark">Sell Houses</button>
+      </div> 
+   
+
+      <!-- Timeline -->
+  <section class="page-section" id="about">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading text-uppercase">Happy Steps for a Happy Home</h2>
+          <h3 class="section-subheading text-muted">Let's find you a home !</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <ul class="timeline">
+            <li>
+              <div class="timeline-image">
+                <img class="rounded-circle img-fluid" src="assets/about/1.jpg" alt="">
+              </div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                  <h4>Find a property !</h4>
+                  <h4 class="subheading">Look as per your needs</h4>
+                </div>
+                <div class="timeline-body">
+                  <p class="text-muted">Begin your search for a ​property on your own before you bring a professional into the picture. Calculate your margins and decide the right location where you want to locate.</p>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-inverted">
+              <div class="timeline-image">
+                <img class="rounded-circle img-fluid" src="assets/about/2.jpg" alt="">
+              </div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                  <h4>Contact the Broker/Management</h4>
+                  <h4 class="subheading">We'll connect you with the right professional</h4>
+                </div>
+                <div class="timeline-body">
+                  <p class="text-muted">Professionals having a knowledge of local community,real estate trends and data, sales and negotiation. And help you shortlist some amazing properties and show them off.</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="timeline-image">
+                <img class="rounded-circle img-fluid" src="assets/about/3.jpg" alt="">
+              </div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                  <h4>Visit the property</h4>
+                  <h4 class="subheading">Staging a home</h4>
+                </div>
+                <div class="timeline-body">
+                  <p class="text-muted">  After shortlisting your dream houses, you can visit the property with a housing professional assigned by us, and take a step towards your future home!</p>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-inverted">
+              <div class="timeline-image">
+                <img class="rounded-circle img-fluid" src="assets/about/4.jpg" alt="">
+              </div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                  <h4>Do the Paperwork</h4>
+                  <h4 class="subheading">Let's get you one</h4>
+                </div>
+                <div class="timeline-body">
+                  <p class="text-muted">The typical homeowner stays in their home for 14 years before selling. When shopping for a home, don’t just think of your immediate needs. Make sure the home you select will meet your long-term goals, so you won’t have to move again in the near future.</p>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-inverted">
+              <div class="timeline-image">
+                <h4>Move in
+                  <br>and make
+                  <br> memories
+                </h4>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
