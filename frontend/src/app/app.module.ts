@@ -130,7 +130,7 @@ const appRoutes: Routes = [ //routes to pages
     ReactiveFormsModule,
     FileUploadModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyBGpbUohOMVEmS8YRFVRQy4FlTS3oy1ndo',// api for google maps
+      apiKey: '',// api for google maps
       libraries: ['places','geometry'],
       
     }),
